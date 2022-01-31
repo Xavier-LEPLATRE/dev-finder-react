@@ -1,0 +1,60 @@
+@use 'src/styles/vars';
+
+.form {
+    background-color: vars.$med-color;
+    padding: 1em;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    transition: all ease-in-out 0.4s;
+
+    .app--light & {
+        background-color: vars.$light-color;
+        box-shadow: 0px 3px 10px #888;
+    }
+    
+    & i {
+        margin: auto 0.5em;
+        color: vars.$alt-color;        
+    }
+    
+    &-input {
+        width: 100%;
+        padding: 0.5em;
+        font-size: 1.1rem;
+        background-color: transparent;
+        border: none;
+        color: vars.$light-color;
+        transition: all ease-in-out 0.4s;
+        
+        &::placeholder {
+            color: vars.$light-color;
+            letter-spacing: 0.25em;
+            font-size: 1.1rem;
+            transition: all ease-in-out 0.4s;
+
+            .app--light & {
+                color: vars.$dark-color;
+            }            
+        }
+
+        .app--light & {
+            color: vars.$dark-color;
+        }
+    }
+
+    &-button {
+        background-color: vars.$alt-color;
+        border-radius: 10px;
+        border: none;
+        padding: 1em;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        color: vars.$light-color;
+        letter-spacing: 0.25em;
+
+        &:hover {
+            background-color: #328eff;
+        }
+    }
+}

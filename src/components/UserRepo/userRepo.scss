@@ -1,0 +1,11 @@
+@use '../../styles/vars';
+
+ul {
+    display: flex;
+    justify-content: space-around;
+
+    & li p{
+        text-align: left;
+        margin-bottom: 0.5em;
+    }
+}

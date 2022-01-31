@@ -1,0 +1,17 @@
+@use '../../styles/vars';
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &-item {
+        width: 50%;
+        margin-bottom: 0.5em;
+        display: flex;
+
+        & span {
+            margin-right: 0.5em;
+        }
+    }
+}

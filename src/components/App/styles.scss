@@ -1,0 +1,19 @@
+@use 'src/styles/vars';
+
+.app {
+  width: 600px;
+  padding: 2em;
+  margin: 1em auto;
+  text-align: center;
+  border-radius: 15px;
+  transition: background-color ease-in-out 0.4s;
+
+  &--light {
+    background-color: vars.$light-color;
+    color: vars.$dark-color;
+  }
+}
+
+.app img {
+  max-width: 150px;
+}
