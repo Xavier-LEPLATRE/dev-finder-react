@@ -28,7 +28,7 @@ const App = () => {
   useEffect(() => {
     loadUser();
   }, []);
-
+  
   return (
   <div className={`app ${lightMode ? 'app--light' : ''}`}>
     <Header 

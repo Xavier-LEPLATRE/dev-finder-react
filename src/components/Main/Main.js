@@ -3,13 +3,17 @@ import UserRepo from '../UserRepo/UserRepo'
 import UserContacts from '../UserContacts/UserContacts';
 import PropTypes from 'prop-types';
 import domPurify from 'dompurify';
+import Moment from 'moment';
 
 import '../Main/main.scss';
 
 const Main = ({
     user,
 }) => {
-  return (
+    const date = Moment(`${user.created_at}`).format('DD MMMM YYYY');
+    console.log(date);
+    console.log(user);
+    return (
     <main className="main">
         <div className="main-left">
             <div className="main-left--avatar"><img src={user.avatar_url} alt="" /></div>
@@ -17,7 +21,7 @@ const Main = ({
         <div className="main-right">
             <header className="main-right--header">
                 <h2 className="main-right--name">{user.name}</h2>
-                <span className="main-right--date">Joined 01 Jan 2022</span>
+                <span className="main-right--date">Since {date}</span>
                 <p className="main-right--login">{user.login}</p>
                 <p 
                     className="main-right--bio" 
@@ -33,7 +37,7 @@ const Main = ({
         </div>
 
     </main>
-  );
+    );    
 };
 
 Main.propTypes = {
