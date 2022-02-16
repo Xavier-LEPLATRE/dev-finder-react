@@ -2,11 +2,15 @@
 @use 'vars';
 
 body {
+  height: 100vh;
   font-family: vars.$font;
   font-size: 16px;
   font-weight: 400;
   background-color: vars.$dark-color;
   color: vars.$light-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 

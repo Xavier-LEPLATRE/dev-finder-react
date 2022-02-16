@@ -39,6 +39,7 @@
     &-right {
         flex: 2;
         display: flex;
+        flex-wrap: nowrap;
         flex-direction: column;
         justify-content: space-between;
 
